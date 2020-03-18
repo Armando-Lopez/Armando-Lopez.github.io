@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
     const status_container = document.querySelectorAll('.rover-status-container');
 
 
-    fetch()
+    fetch(roversUrl)
         .then((response) => response.json())
         .then((data) => {
 
