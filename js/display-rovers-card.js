@@ -1,5 +1,6 @@
 window.addEventListener('load', () => {
 
+    console.log('loadoed');
     const roversUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers?api_key=Y7uIPtPAgYLZ0GAvIHgQbIjRLNGvWhtm2uVxP4qo`;
     const rovers_links = document.querySelectorAll('.rover-link');
     const images_container = document.querySelectorAll('.rover-image-container');
@@ -11,13 +12,13 @@ window.addEventListener('load', () => {
     const status_container = document.querySelectorAll('.rover-status-container');
 
 
-    fetch(roversUrl)
+    fetch()
         .then((response) => response.json())
         .then((data) => {
 
             data.rovers.forEach((rover, index) => {
 
-                rovers_links[index].setAttribute('href', `#${rover.name}`)
+                rovers_links[index].setAttribute('href', `#rovers#${rover.name}`)
 
                 images_container[index].style.background = `url(../img/rovers/${rover.name}.jpg)`;
                 images_container[index].style.borderTopLeftRadius = '15px'
@@ -43,3 +44,4 @@ window.addEventListener('load', () => {
             console.log(err)
         });
 });
+console.log('loadoeding');

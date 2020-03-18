@@ -16,25 +16,28 @@
                 <span>conociendo el planeta rojo</span>
             </div>
         </div>
-
+        <hr>
         <nav>
             <ul>
-                <li>
+                <li id="inicio-link" class="nav-link">
+                    <a href="#inicio">Inicio</a>
+                </li>
+
+                <li id="planeta-link" class="nav-link">
                     <a href="#planeta">Planeta</a>
                 </li>
-                <li>
+                <li id="rovers-link" class="nav-link">
                     <a href="#rovers">Rovers</a>
                 </li>
             </ul>
         </nav>
-
     </header>
 
     <div class="main">
         <section id="planet"></section>
-        <section id="rovers" class="rovers_container">
+        <section class="rovers-container">
 
-            <a class="rover-link" href="">
+            <a class="rover-link" href="#">
                 <div class="card">
                     <div class="rover-image-container"></div>
                     <div class="card-text">
@@ -112,6 +115,7 @@
         </section>
     </div>
 </body>
+<script src="js/style-links.js"></script>
 <script src="js/display-rovers-card.js"></script>
 
 </html>
