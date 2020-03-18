@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: url(../img/bg.jpg);
+  overflow-x: hidden;
+}
+
+header {
+  padding: 0.2em;
+}
+
+header a {
+  text-decoration: none;
+  font-weight: bold;
+  color: brown;
+}
+
+.presentation {
+  position: relative;
+  margin: 0.1em;
+}
+
+.presentation .title {
+  width: calc(100% + 2em);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.3rem;
+  border-radius: 1em;
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.presentation h1 {
+  text-transform: uppercase;
+  animation: appearTitle 3s forwards;
+}
+
+.presentation .title span {
+  animation: appearTitle 3s forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+header nav {
+  margin: 0.2em;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  font-size: 1.8em;
+  margin-right: 1rem;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+  background: rgba(250, 250, 250, 0.2);
+}
+
+.main {
+  padding: 0 0.3em;
+  margin-top: 2rem;
+}
+
+section#rovers {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-around;
+}
+
+section#rovers a {
+  text-decoration: none;
+}
+
+.card {
+  margin: 0.5em;
+  width: auto;
+
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 200px auto auto;
+  grid-template-areas: "image" "text" "stats";
+
+  text-align: center;
+  border-radius: 18px;
+  box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.card-image {
+  grid-area: image;
+  /* background: url(../img/rovers/Curiosity.jpg); */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 0;
+  color: white;
+}
+
+.card-stats {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgba(163, 110, 41, 0.507);
+}
+
+.card-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  color: white;
+}
+
+.card-stats .type {
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+@media (min-width: 930px) {
+  .card {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .card:hover {
+    transform: translateY(-1em);
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes appearTitle {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
